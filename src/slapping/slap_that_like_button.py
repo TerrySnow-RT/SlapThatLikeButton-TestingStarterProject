@@ -1,5 +1,6 @@
 import enum
 
+
 class LikeState(enum.Enum):
     empty = enum.auto()
     liked = enum.auto()
@@ -11,6 +12,7 @@ slap_like_transitions = {
     LikeState.liked: LikeState.empty,
     LikeState.disliked: LikeState.liked,
 }
+
 
 slap_dislike_transitions = {
     LikeState.empty: LikeState.disliked,
