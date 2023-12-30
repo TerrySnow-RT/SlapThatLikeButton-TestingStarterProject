@@ -8,7 +8,7 @@ def capture_stdout(monkeypatch):
 
     def fake_write(s):
         buffer["stdout"] += s
-        buffer["write_calls"] += 1
+        buffer["write_calls"] += 1  # type: ignore
 
     monkeypatch.setattr(sys.stdout, 'write', fake_write)
     return buffer
@@ -18,5 +18,5 @@ def capture_stdout(monkeypatch):
 def db_conn():
     db = ...
     url = ...
-    with db.connect(url) as conn:  # connection will be torn down after all tests finish
+    with db.connect(url) as conn:  # type: ignore
         yield conn
