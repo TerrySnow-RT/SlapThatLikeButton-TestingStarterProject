@@ -34,12 +34,12 @@ def test_regex_slaps():
     assert slap_many(LikeState.empty, "[ld]*ddl") is LikeState.liked
 
 
-@pytest.mark.xfail #used to demo xfail
+@pytest.mark.xfail  # used to demo xfail
 def test_divide_by_zero():
     assert 1 / 0 == 1
 
 
-@pytest.mark.xfail #no DB support yet
+@pytest.mark.xfail  # no DB support yet
 def test_db_slap(db_conn):
     db_conn.read_slaps()
     assert ...
