@@ -13,6 +13,7 @@ slap_like_transitions = {
     LikeState.disliked: LikeState.liked,
 }
 
+
 slap_dislike_transitions = {
     LikeState.empty: LikeState.disliked,
     LikeState.liked: LikeState.disliked,
